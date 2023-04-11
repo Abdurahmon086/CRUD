@@ -1,0 +1,43 @@
+header {
+    padding: 12px 33px;
+    background-color: #fff;
+
+    .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__right {
+            display: flex;
+            align-items: center;
+            column-gap: 27px;
+        }
+
+        &__inner {
+            width: 212px;
+            border: 1px solid #E5E5E5;
+            border-radius: 8px;
+            padding: 9px 13px 11px 13px;
+            position: relative;
+
+            &::after {
+                content: url("../../../public/search.svg");
+                width: 14px;
+                height: 14px;
+                top: 11px;
+                position: absolute;
+
+            }
+        }
+
+        &__input {
+            outline: none;
+            border: none;
+
+            &::placeholder {
+                color: #C4C4C4;
+            }
+        }
+
+    }
+}

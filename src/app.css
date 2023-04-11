@@ -1,0 +1,10 @@
+.all__wrapper {
+    height: 100vh;
+    display: grid;
+    flex-wrap: wrap-reverse;
+    grid-template-columns: 270px auto;
+}
+
+.main-all {
+    height: 93.3%;
+}

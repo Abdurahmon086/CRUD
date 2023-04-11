@@ -1,0 +1,92 @@
+.student {
+    padding: 0 30px;
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #E5E5E5;
+        padding: 12px 0;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    &__top-right {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+    }
+
+    &__btn {
+        background: #FEAF00;
+        border-radius: 4px;
+        padding: 13px 27px 14px 26px;
+        border: #FEAF00;
+        font-weight: 500;
+        color: #FFFFFF;
+    }
+
+    &__bottom {
+        width: 100%;
+
+        .card {
+
+            &__table-wrapper {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 0 10px;
+            }
+
+            &__head-row {
+                text-align: left;
+            }
+
+            &__head-text {
+                padding: 21px 0;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 15px;
+                color: #ACACAC;
+
+                &:nth-child(1) {
+                    width: 70px;
+                }
+                &:nth-child(2) {
+                    width: 170px;
+                }
+            }
+
+            &__body-row {
+                background: #FFFFFF;
+            }
+
+            &__body-img {
+                border-bottom-left-radius: 5px;
+                border-top-left-radius: 5px;
+            }
+
+            &__body-img img {
+                border-radius: 18px;
+                padding: 15px 13px;
+            }
+
+            &__body-text {
+                padding: 15px 0;
+            }
+
+            &__body-icon {
+                border-bottom-right-radius: 5px;
+                border-top-right-radius: 5px;
+
+                :nth-child(2) {
+                    margin-left: 33px;
+                }
+
+            }
+        }
+    }
+}

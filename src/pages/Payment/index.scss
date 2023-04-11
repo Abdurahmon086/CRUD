@@ -1,0 +1,55 @@
+.pay {
+    padding: 0 30px;
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        border-bottom: 1px solid #E5E5E5;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    &__bottom {
+
+        .card {
+            &__table-wrapper {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 0;
+            }
+
+            &__head-row {
+                text-align: left;
+            }
+
+            &__head-text {
+                padding: 21px 13px;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 15px;
+                color: #ACACAC;
+                width: 16%;
+            }
+
+            &__body-row {
+                background: #FFFFFF;
+
+                &:nth-child(even) {
+                    background: inherit;
+
+                }
+            }
+
+            &__body-text {
+                padding: 15px 13px;
+            }
+
+        }
+    }
+}

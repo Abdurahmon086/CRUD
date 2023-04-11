@@ -1,0 +1,55 @@
+.hero {
+    padding: 30px 33px;
+    height: 100%;
+    background-color: #FDFDFD;
+
+    &__list {
+        display: flex;
+        column-gap: 30px;
+    }
+
+    &__card {
+        border-radius: 8px;
+        width: 255px;
+        height: 157px;
+        padding: 20px;
+
+        &:first-child {
+            background: #F0F9FF;
+        }
+
+        &:nth-child(2) {
+            background-color: #FEF6FB;
+        }
+
+        &:nth-child(3) {
+            background-color: #FEFBEC;
+        }
+
+        &:last-child {
+            background: linear-gradient(110.42deg, #FEAF00 18.27%, #F8D442 91.84%);
+
+            p {
+                color: #FFF;
+            }
+        }
+
+        .card {
+            &__text {
+                margin-top: 19px;
+                font-weight: 500;
+                color: #6C6C6C;
+            }
+
+            &__sp {
+                display: block;
+                text-align: right;
+                margin-top: 10px;
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 37px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
