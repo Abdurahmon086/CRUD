@@ -5,7 +5,7 @@ import pen from '../../../public/pen.svg'
 import del from '../../../public/delet.svg'
 import './index.scss'
 
-function Stundents() {
+function Students() {
     return (
         <section className='student'>
             <div className="student__wrapper">
@@ -47,4 +47,4 @@ function Stundents() {
     )
 }
 
-export default Stundents
+export default Students

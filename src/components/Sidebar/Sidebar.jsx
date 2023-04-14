@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './index.scss'
 import logo from '../../../public/Logo.svg'
 import person from '../../../public/admin.jpg'
@@ -15,9 +16,9 @@ function Sidebar() {
         <sidebar>
             <div className="sidebar">
                 <div className="sidebar__wrapper">
-                    <a href="/" className='sidebar__img'>
+                    <NavLink to="/" className='sidebar__img'>
                         <img src={logo} alt="CRUD OPERATIONS logo" />
-                    </a>
+                    </NavLink>
                     <div className="sidebar__top">
                         <img src={person} alt="person image" width={128} height={128} />
                         <h4 className="sidebar__title">Karthi Madesh</h4>
@@ -25,16 +26,16 @@ function Sidebar() {
                     </div>
                     <nav className='sidebar__navbar'>
                         <ul className="sidebar__list">
-                            <li className="sidebar__item"><a href="#" className='sidebar__link' ><img src={home} alt="home icon" />    Home</a></li>
-                            <li className="sidebar__item"><a href="#" className='sidebar__link' ><img src={bookmark} alt="home icon" />    Course</a></li>
-                            <li className="sidebar__item"><a href="#" className='sidebar__link' ><img src={graduation} alt="home icon" />   Students</a></li>
-                            <li className="sidebar__item"><a href="#" className='sidebar__link' ><img src={usd} alt="home icon" />   Payment</a></li>
-                            <li className="sidebar__item"><a href="#" className='sidebar__link' ><img src={file} alt="home icon" />   Report</a></li>
-                            <li className="sidebar__item"><a href="#" className='sidebar__link' ><img src={sliders} alt="home icon" />   Settings</a></li>
+                            <NavLink to="/" className="sidebar__item"><a href='#' className='sidebar__link' ><img src={home} alt="home icon" />    Home</a></NavLink>
+                            <NavLink to="/courde" className="sidebar__item"><a href='#' className='sidebar__link' ><img src={bookmark} alt="home icon" />    Course</a></NavLink>
+                            <NavLink to="/students" className="sidebar__item"><a href='#' className='sidebar__link' ><img src={graduation} alt="home icon" />   Students</a></NavLink>
+                            <NavLink to="/payment" className="sidebar__item"><a href='#' className='sidebar__link' ><img src={usd} alt="home icon" />   Payment</a></NavLink>
+                            <NavLink to="/report" className="sidebar__item"><a href='#' className='sidebar__link' ><img src={file} alt="home icon" />   Report</a></NavLink>
+                            <NavLink to="/settings" className="sidebar__item"><a href='#' className='sidebar__link' ><img src={sliders} alt="home icon" />   Settings</a></NavLink>
                         </ul>
                     </nav>
                     <div className="sidebar__bottom">
-                        <a href="#" className='sidebar__login'>Logout <img src={logout} alt="sign out icon" /></a>
+                        <NavLink to="/login" className='sidebar__login'>Logout <img src={logout} alt="sign out icon" /></NavLink>
                     </div>
                 </div>
             </div>

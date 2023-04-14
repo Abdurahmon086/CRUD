@@ -37,6 +37,13 @@
 
     &__navbar {
         margin-top: 80px;
+
+        .active {
+            background: #FEAF00;
+            border-radius: 4px;
+            transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        }
     }
 
     &__list {
@@ -52,11 +59,6 @@
         padding: 12px 0;
         text-align: center;
 
-        &:hover {
-            background: #FEAF00;
-            border-radius: 4px;
-            transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
-        }
     }
 
     &__link {
