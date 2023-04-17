@@ -1,19 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import sort from '../../../public/sort.svg'
 import person from '../../../public/person.jpg'
 import pen from '../../../public/pen.svg'
 import del from '../../../public/delet.svg'
 import './index.scss'
+import { context } from '../../context/Context'
 
 function Students() {
+    const { mode, language } = useContext(context)
+
+    const darkColor = {
+        color: mode === "Dark" ? '#Fff' : '',
+    }
     return (
         <section className='student'>
             <div className="student__wrapper">
                 <div className="student__top">
-                    <h2 className="student__title">Students List</h2>
+                    <h2 className="student__title" style={darkColor}>{language.studentsList}</h2>
                     <div className="student__top-right">
                         <img src={sort} alt="sort icon" />
-                        <button className='student__btn'>ADD NEW STUDENT</button>
+                        <button className='student__btn'>{language.addBtn}</button>
                     </div>
                 </div>
                 <div className="student__bottom card">
@@ -21,11 +27,11 @@ function Students() {
                         <thead className='card__table--head'>
                             <tr className='card__head-row'>
                                 <th className='card__head-text'></th>
-                                <th className='card__head-text'> Name</th>
+                                <th className='card__head-text'> {language.name}</th>
                                 <th className='card__head-text'> Email</th>
-                                <th className='card__head-text'>Phone</th>
-                                <th className='card__head-text'>Enroll Number</th>
-                                <th className='card__head-text'>Date of admission</th>
+                                <th className='card__head-text'>{language.phone}</th>
+                                <th className='card__head-text'>{language.enrollNumber}</th>
+                                <th className='card__head-text'>{language.dateAdmission}</th>
                                 <th className='card__head-text'></th>
                             </tr>
                         </thead>

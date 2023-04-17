@@ -1,26 +1,32 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './index.scss'
 import sort from '../../../public/sort.svg'
 import eye from '../../../public/eye.svg'
+import { context } from '../../context/Context'
 
 function Payment() {
+    const {mode, language} = useContext(context)
+    
+    const darkColor = {
+        color: mode === "Dark" ? '#Fff' : '',
+    }
     return (
         <section className='pay'>
             <div className="pay__wrapper">
                 <div className="pay__top">
-                    <h4 className="pay__title">Payment Details</h4>
+                    <h4 className="pay__title" style={darkColor}>{language.paymentDetails}</h4>
                     <img src={sort} alt="sort icon" />
                 </div>
                 <div className="pay__bottom card">
                     <table className='card__table-wrapper'>
                         <thead className='card__table--head'>
                             <tr className='card__head-row'>
-                                <th className='card__head-text'> Name</th>
-                                <th className='card__head-text'> Payment Schedule</th>
-                                <th className='card__head-text'> Bill Number</th>
-                                <th className='card__head-text'>Amount Paid</th>
-                                <th className='card__head-text'>Balance amount</th>
-                                <th className='card__head-text'>Date </th>
+                                <th className='card__head-text'> {language.name}</th>
+                                <th className='card__head-text'> {language.paymentSh}</th>
+                                <th className='card__head-text'> {language.billNumber}</th>
+                                <th className='card__head-text'> {language.amountPaid}</th>
+                                <th className='card__head-text'>{language.blanceAmount}</th>
+                                <th className='card__head-text'>{language.date} </th>
                                 <th className='card__head-text'></th>
                             </tr>
                         </thead>

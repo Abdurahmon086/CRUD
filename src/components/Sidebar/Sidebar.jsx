@@ -11,35 +11,43 @@ import usd from '../../../public/usd-side.svg'
 import file from '../../../public/file.svg'
 import sliders from '../../../public/sliders.svg'
 
-function Sidebar() {
+function Sidebar({ mode, language }) {
+
+    const darkMode = {
+        backgroundColor: mode === "Dark" ? '#474444' : '',
+    }
+    const darkColor = {
+        color: mode === "Dark" ? '#Fff' : '',
+    }
+
     return (
-        <sidebar>
-            <div className="sidebar">
+        <>
+            <div className="sidebar" style={darkMode}>
                 <div className="sidebar__wrapper">
                     <NavLink to="/" className='sidebar__img'>
                         <img src={logo} alt="CRUD OPERATIONS logo" />
                     </NavLink>
                     <div className="sidebar__top">
                         <img src={person} alt="person image" width={128} height={128} />
-                        <h4 className="sidebar__title">Karthi Madesh</h4>
-                        <span className='sidebar__sp'>Admin</span>
+                        <h4 className="sidebar__title" style={darkColor}>Karthi Madesh</h4>
+                        <span className='sidebar__sp' style={darkColor}>Admin</span>
                     </div>
                     <nav className='sidebar__navbar'>
                         <ul className="sidebar__list">
-                            <NavLink to="/" className="sidebar__item"><a href='#' className='sidebar__link' ><img src={home} alt="home icon" />    Home</a></NavLink>
-                            <NavLink to="/courde" className="sidebar__item"><a href='#' className='sidebar__link' ><img src={bookmark} alt="home icon" />    Course</a></NavLink>
-                            <NavLink to="/students" className="sidebar__item"><a href='#' className='sidebar__link' ><img src={graduation} alt="home icon" />   Students</a></NavLink>
-                            <NavLink to="/payment" className="sidebar__item"><a href='#' className='sidebar__link' ><img src={usd} alt="home icon" />   Payment</a></NavLink>
-                            <NavLink to="/report" className="sidebar__item"><a href='#' className='sidebar__link' ><img src={file} alt="home icon" />   Report</a></NavLink>
-                            <NavLink to="/settings" className="sidebar__item"><a href='#' className='sidebar__link' ><img src={sliders} alt="home icon" />   Settings</a></NavLink>
+                            <li className="sidebar__item"><NavLink to="/" className='sidebar__link' style={darkColor}><img src={home} alt="home icon" />   {language.home}</NavLink></li>
+                            <li className="sidebar__item"><NavLink to="/courde" className='sidebar__link' style={darkColor}><img src={bookmark} alt="home icon" />   {language.course}</NavLink></li>
+                            <li className="sidebar__item"><NavLink to="/students" className='sidebar__link' style={darkColor}><img src={graduation} alt="home icon" /> {language.students}</NavLink></li>
+                            <li className="sidebar__item"><NavLink to="/payment" className='sidebar__link' style={darkColor} ><img src={usd} alt="home icon" /> {language.payment}</NavLink></li>
+                            <li className="sidebar__item"><NavLink to="/report" className='sidebar__link' style={darkColor}><img src={file} alt="home icon" />  {language.report}</NavLink></li>
+                            <li className="sidebar__item"><NavLink to="/settings" className='sidebar__link' style={darkColor}><img src={sliders} alt="home icon" /> {language.settings}</NavLink></li>
                         </ul>
                     </nav>
                     <div className="sidebar__bottom">
-                        <NavLink to="/login" className='sidebar__login'>Logout <img src={logout} alt="sign out icon" /></NavLink>
+                        <NavLink to="/login" className='sidebar__login ' style={darkColor}>{language.logout} <img src={logout} alt="sign out icon" /></NavLink>
                     </div>
                 </div>
             </div>
-        </sidebar>
+        </>
     )
 }
 

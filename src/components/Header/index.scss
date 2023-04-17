@@ -13,6 +13,11 @@ header {
             column-gap: 27px;
         }
 
+        &__mode {
+            border: none;
+            background: none;
+        }
+
         &__inner {
             width: 212px;
             border: 1px solid #E5E5E5;
@@ -33,10 +38,29 @@ header {
         &__input {
             outline: none;
             border: none;
+            background: inherit;
 
             &::placeholder {
                 color: #C4C4C4;
             }
+        }
+
+        &__choose {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+        }
+
+        &__select {
+            background: inherit;
+            padding: 5px 10px;
+            border: 1px solid #E5E5E5;
+            color: #a19e9e;
+            outline: none;
+        }
+
+        &__svg {
+            fill: #d30707;
         }
 
     }

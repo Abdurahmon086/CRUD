@@ -53,22 +53,18 @@
         row-gap: 10px;
     }
 
-    &__item {
-        width: 193px;
-        height: 41px;
-        padding: 12px 0;
-        text-align: center;
-
-    }
 
     &__link {
+        padding: 12px 0;
+        width: 193px;
+        height: 41px;
         display: flex;
         column-gap: 15px;
         align-items: center;
-        margin-left: 41px;
         font-weight: 500;
 
         img {
+            margin-left: 41px;
             width: 19px;
             height: 17px;
         }
@@ -84,4 +80,5 @@
         align-items: center;
         column-gap: 23px;
     }
-}
+
+   }
