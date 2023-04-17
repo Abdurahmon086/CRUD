@@ -1,20 +1,19 @@
 import React, { useState } from 'react'
-import { BrowserRouter, Routes, Route, Router } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Sidebar from './components/Sidebar/Sidebar'
 import './app.css'
 import Home from './pages/Home/Home'
 import Header from './components/Header/Header'
 import Stundents from './pages/Students/Students'
 import Payment from './pages/Payment/Payment'
-// import Login from './pages/Login/Login'
 import Error from './pages/Error/Error'
 import { context } from './context/Context'
 import LANG from './lang/lang'
 
 function App() {
 
-  const [leng, setLeng] = useState(localStorage.getItem('leng'))
-  const [mode, setMode] = useState(localStorage.getItem('theme'))
+  const [leng, setLeng] = useState(localStorage.getItem('leng') || 'eng')
+  const [mode, setMode] = useState(localStorage.getItem('theme') || 'light')
 
   const darkMode = {
     backgroundColor: mode === "Dark" ? '#686565' : '',
