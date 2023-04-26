@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import './index.scss'
 import logo from '../../../public/Logo.svg'
 import person from '../../../public/admin.jpg'
@@ -10,6 +10,7 @@ import graduation from '../../../public/graduation-side.svg'
 import usd from '../../../public/usd-side.svg'
 import file from '../../../public/file.svg'
 import sliders from '../../../public/sliders.svg'
+import { Logout } from '../../hooks/useLogout';
 
 function Sidebar({ mode, language }) {
 
@@ -20,6 +21,7 @@ function Sidebar({ mode, language }) {
         color: mode === "Dark" ? '#Fff' : '',
     }
 
+    const navigate = useNavigate()
     return (
         <>
             <div className="sidebar" style={darkMode}>
@@ -43,7 +45,7 @@ function Sidebar({ mode, language }) {
                         </ul>
                     </nav>
                     <div className="sidebar__bottom">
-                        <NavLink to="/login" className='sidebar__login ' style={darkColor}>{language.logout} <img src={logout} alt="sign out icon" /></NavLink>
+                        <span className='sidebar__login ' style={darkColor} onClick={() => Logout(navigate)}>{language.logout}  <img src={logout} alt="sign out icon" /></span>
                     </div>
                 </div>
             </div>
